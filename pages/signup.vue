@@ -24,9 +24,16 @@ const signup = () => {
 </script>
 
 <template >
-  <div>
+  <div
+    class="main-content relative min-h-screen"
+    :style="{
+      'background-size': 'cover',
+      'backdrop-filter': 'blur(5px)',
+      //filter: 'blur(8px)',
+    }"
+  >
     <NavbarVue />
-    <div class="container my-10 mx-auto max-w-xl bg-pink-400 rounded-xl">
+    <div class="container my-10 mx-auto max-w-xl bg-purple-400 rounded-xl">
       <form action="" class="p-5" @submit.prevent="signup">
         <h1 class="text-white text-center text-3xl">Signup Form</h1>
         <div class="my-3">
@@ -37,12 +44,11 @@ const signup = () => {
             class="
               outline-none
               w-full
-              py-2
+              p-2
               rounded
-              bg-transparent
-              border-b-2
+              bg-purple-700
               text-white text-lg
-              placeholder-white
+              placeholder-purple-500
             "
             placeholder="Enter Your Name"
           />
@@ -55,12 +61,11 @@ const signup = () => {
             class="
               outline-none
               w-full
-              py-2
+              p-2
               rounded
-              bg-transparent
-              border-b-2
+              bg-purple-700
               text-white text-lg
-              placeholder-white
+              placeholder-purple-500
             "
             placeholder="Enter Your Email"
           />
@@ -75,25 +80,27 @@ const signup = () => {
             class="
               outline-none
               w-full
-              py-2
+              p-2
               rounded
-              bg-transparent
-              border-b-2
+              bg-purple-700
               text-white text-lg
-              placeholder-white
+              placeholder-purple-500
             "
             placeholder="Enter Your Password"
           />
         </div>
         <button
           class="
-            rounded-md
-            border
+            rounded-full
             px-10
             py-2
-            bg-pink-800
+            mt-6
+            bg-purple-800
             text-white text-xl text-semibold
-            hover:bg-pink-900
+            hover:bg-purple-900
+            align-center
+            mx-auto
+            flex
           "
           type="submit"
         >
@@ -115,4 +122,11 @@ export default {
 };
 </script>
 <style>
+.main-content {
+  z-index: 1;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("@/assets/Worthing.jpeg");
+  min-width: "100vw";
+  min-height: "100vh";
+}
 </style>
